@@ -1,5 +1,5 @@
 /* eslint-disable linebreak-style */
-import { Avatar, Divider, Drawer, Icon, List, ListItemButton, ListItemIcon, ListItemText, useTheme } from '@mui/material'
+import { Avatar, Divider, Drawer, Icon, List, ListItemButton, ListItemIcon, ListItemText, useMediaQuery, useTheme } from '@mui/material'
 import { Box } from '@mui/system'
 
 interface IMenuLateralProps {
@@ -10,6 +10,7 @@ interface IMenuLateralProps {
 export const MenuLateral: React.FC<IMenuLateralProps> = ( { children } ) => {
 
   const theme = useTheme()
+  const smDown = useMediaQuery(theme.breakpoints.down('sm'))
   return (
     <>
       <Drawer variant='permanent'>

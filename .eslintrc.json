@@ -1,32 +1,38 @@
 {
-       "extends": [
-              "eslint:recommended",
-              "plugin:react/recommended",
-              "prettier",
-              "plugin:prettier/recommended"
-        ],
-       "plugins": [
-              "react",
-              "prettier"
-        ],
-       "parserOptions": {
-              "ecmaVersion": 6,
-              "sourceType": "module",
-              "ecmaFeatures": {
-                   "jsx": true
-              }
-        },
-       "env": {
-              "browser": true,
-              "node": true
-        },
-       "settings": {
-              "import/resolver": {
-                   "node": {
-                          "paths": [
-                                  "src"
-                          ]
-                    }
-              }
-        }
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended",
+    "prettier",
+    "plugin:prettier/recommended"
+  ],
+  "plugins": ["react", "prettier"],
+      "rules": {
+      "prettier/prettier": ["error", {}, { "usePrettierrc": true}],
+      "react/prop-types": "off",
+      "react/react-in-jsx-scope": "off",
+      "@typescript-eslint/explicit-function-return-type": "off",
+      "@typescript-eslint/no-explicit-any": "off",
+      "simple-import-sort/imports": "error",
+      "simple-import-sort/exports": "error"
+      },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "paths": ["src"]
+      }
+    }
+  }
 }
