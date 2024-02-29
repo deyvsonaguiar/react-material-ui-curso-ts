@@ -1,6 +1,6 @@
 import { Box, Button, Icon, Paper, TextField, useTheme } from '@mui/material'
 
-interface IBarraFerramentasProps {
+interface IFerramentasListagemProps {
   textoBusca?: string
   mostrarInputBusca?: boolean
   mudarTextoBusca?: (novoTexto: string) => void
@@ -8,7 +8,8 @@ interface IBarraFerramentasProps {
   mostrarBotaoNovo?: boolean
   clicarNovo?: () => void
 }
-export const BarraFerramentas: React.FC<IBarraFerramentasProps> = ({
+
+export const FerramentasListagem: React.FC<IFerramentasListagemProps> = ({
   textoBusca = '',
   mostrarInputBusca = false,
   mudarTextoBusca,
@@ -17,6 +18,7 @@ export const BarraFerramentas: React.FC<IBarraFerramentasProps> = ({
   clicarNovo
 }) => {
   const theme = useTheme()
+
   return (
     <Box
       component={Paper}
